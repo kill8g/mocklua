@@ -1,0 +1,22 @@
+
+//@mock TestProto1 : {id = 1, list = {"a", "b", "c"}, sub = {ok = true, value = 1.9}}
+message TestProto1 {
+	required uint32 id = 1;
+	repeated string list = 2;
+	message SubMessage {
+		optional bool ok = 1;
+		optional float value = 2;
+	}
+	optional SubMessage sub = 3;
+}
+
+//@mock TestProto2 : function() return {id = 1, list = {"a"}, sub = {ok = false}} end
+message TestProto2 {
+	required uint32 id = 1;
+	repeated string list = 2;
+	message SubMessage {
+		optional bool ok = 1;
+		optional float value = 2;
+	}
+	optional SubMessage sub = 3;
+}
