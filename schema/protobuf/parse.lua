@@ -1,5 +1,5 @@
 local pb = require "pb"
-local protoc = require "protobuf.protoc"
+local protoc = require "schema.protobuf.protoc"
 
 local M = {}
 
